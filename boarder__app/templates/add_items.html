@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Add Items</title>
+{% load static %}
+<link rel="stylesheet" href="{% 'static' 'css/index.css'%}">
+</head>
+<body>
+    <a href="/success">Back</a>
+    <div class="item-entry-container">
+        <div class="item-entry">
+            <form action="/add/items" method="POST">
+    
+            <label for="title">Title:</label>
+            <input type="text" name="title">
+            <br>
+            <label for="catagory">Catagory:</label>
+            <input type="text" name="catagory">
+            <br>
+            <label for="item_photo_url">Item Photo:</label>
+            <input type="text" name="item_photo_url">
+            <br>
+            <label for="desc">Description</label>
+            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

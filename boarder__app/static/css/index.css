@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #e0fbfcff;
+}
+#landing-body {
+    background-color: #e0fbfcff;
+}
+#landing-title {
+    background-color: rgb(235, 122, 24);
+    width: 450px;
+    height: 350px;
+    padding-top: 70px;
+    margin: auto;
+    margin-top: 190px; 
+}
+#landing-title hr {
+    width: 75%;
+    background: #e0fbfcff;;
+    margin-left: 55px;
+
+}
+#landing-title h1{
+    font-family: 'Monoton', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: #e0fbfcff;;
+}
+#landing-title a {
+    color: #e0fbfcff;
+    margin: 60px 0 0 200px;
+}
+#register button {
+    margin-left: 735px;
+}
+#register h2 {
+    margin-left: 30px;
+}
+#register{
+    margin-left: 200px;
+}
+#logIn h2 {
+    margin-left: 30px;
+}
+#logIn button {
+    margin-left: 755px;
+}
+.form-group{
+    width: 70%;
+}
+
+#header-body{
+    background-color: rgb(235, 122, 24);
+    display: inline-block;
+    padding: 10px 20px;
+    width: 200px;
+    border-right: 3px solid #293241ff;;
+}
+
+.header-title h1{
+    font-family: 'Monoton', sans-serif;;
+    font-size: x-large;
+    color:#e0fbfcff;
+    text-align: center;
+}
+.header-title hr{
+    width:85%;
+    background-color: #e0fbfcff;
+    margin:-.5px 0 5px 12px;
+}
+.header-options{
+    display: inline-block;
+}
+.header-options ul li {
+    list-style-type: none;
+    color: #293241ff;
+}

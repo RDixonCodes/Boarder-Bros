@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+<title>Product List</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css'%}">
+</head>
+<body>
+    <div id="header-body">
+        <div class="header-title">
+            <h1>BOARDER</h1>
+            <hr>
+            <h1>BROS.</h1>
+        </div>
+    </div>
+        <div class="header-options">
+            <ul>
+                <a href="/success"><li>Back</li></a>
+            </ul>
+        </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="decks-tab" data-bs-toggle="tab" data-bs-target="#decks" type="button" role="tab" aria-controls="home" aria-selected="true">Decks</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tees-tab" data-bs-toggle="tab" data-bs-target="#tees" type="button" role="tab" aria-controls="profile" aria-selected="false">Tees</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other" type="button" role="tab" aria-controls="contact" aria-selected="false">Other</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="decks" role="tabpanel" aria-labelledby="home-tab">
+                <p>List of decks</p>
+                {% for item in all_items%}
+                <ul>
+                    <li>{{item.title}}</li>
+                    <li>{{item.catagory}}</li>
+                    <li>${{item.price}}</li>
+                    <li>{{item.desc}}</li>
+                    <li><a href="/delete/{item.id}">delete</a></li>
+                </ul>
+                {% endfor %}
+            </div>
+            <div class="tab-pane fade" id="tees" role="tabpanel" aria-labelledby="tees-tab">
+                <p>List of Tees</p>
+
+            </div>
+            <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                <p>Other things</p>
+            </div>
+          </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
