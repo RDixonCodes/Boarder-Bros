@@ -77,3 +77,7 @@ body{
     list-style-type: none;
     color: #293241ff;
 }
+
+#item-deck ul li{
+    display: inline-block;
+}

@@ -94,6 +94,14 @@ def view_items(request):
 
     return render(request, 'product_list.html', context)
 
+def delete_items(request, item_id):
+    if 'logged_user' not in request.session:
+        messages.error(request, "Please register or log in first")
+
+    item = Item.objects.get(id = item_id)
+    item.delete()
+    return redirect(f'/items/list')
+
 
 def logout(request):
     request.session.flush()

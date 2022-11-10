@@ -9,6 +9,7 @@ urlpatterns = [
     path('success', views.success),
     path('add/items', views.add),
     path('items/list', views.view_items),
+    path('delete/<int:item_id>', views.delete_items),
     path('logout', views.logout)
     # path('new/user', views.new_user),
     # path('create/user', views.create_user),
